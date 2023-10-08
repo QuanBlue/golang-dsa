@@ -42,14 +42,14 @@
 <details open>
 <summary><b>📖 Table of Contents</b></summary>
 
-- [:star: Key features](#star-key-features)
-- [:toolbox: Getting start](#toolbox-getting-start)
-  - [:pushpin: Prerequisites](#pushpin-prerequisites)
-  - [:hammer_and_wrench: Run locally](#hammer_and_wrench-run-locally)
-- [:world_map: Roadmap](#world_map-roadmap)
-- [:busts_in_silhouette: Contributors](#busts_in_silhouette-contributors)
-- [:sparkles: Credits](#sparkles-credits)
-- [:scroll: License](#scroll-license)
+- [Key features](#star-key-features)
+- [Getting start](#toolbox-getting-start)
+  - [Prerequisites](#pushpin-prerequisites)
+  - [Run locally](#hammer_and_wrench-run-locally)
+- [Roadmap](#world_map-roadmap)
+- [Contributors](#busts_in_silhouette-contributors)
+- [Credits](#sparkles-credits)
+- [License](#scroll-license)
 </details>
 
 # :star: Key features
@@ -78,11 +78,11 @@ go run main.go
 
 # :world_map: Roadmap
 
-- [] search
-- [] sort
-- [] linked list
-- [] stack and queue
-- [] tree
+- [ ] search
+- [ ] sort
+- [ ] linked list
+- [ ] stack and queue
+- [ ] tree
 
 # :busts_in_silhouette: Contributors
 
