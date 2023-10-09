@@ -1,39 +1,39 @@
 <h1 align="center">
   <img src="./assets/golang-logo.png" alt="icon" width="200"></img>
   <br>
-  <b>Golang Data Structure and Algorithm</b>
+  <b>Golang DSA</b>
 </h1>
 
-<p align="center">My first portfolio project using MERN stack</p>
+<p align="center">Collection of Data Structure and Algorithm in Golang</p>
 
 <!-- Badges -->
 <p align="center">
-  <a href="https://github.com/QuanBlue/go-dsa/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/QuanBlue/go-dsa" alt="contributors" />
+  <a href="https://github.com/QuanBlue/golang-dsa/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/QuanBlue/golang-dsa" alt="contributors" />
   </a>
   <a href="">
-    <img src="https://img.shields.io/github/last-commit/QuanBlue/go-dsa" alt="last update" />
+    <img src="https://img.shields.io/github/last-commit/QuanBlue/golang-dsa" alt="last update" />
   </a>
-  <a href="https://github.com/QuanBlue/go-dsa/network/members">
-    <img src="https://img.shields.io/github/forks/QuanBlue/go-dsa" alt="forks" />
+  <a href="https://github.com/QuanBlue/golang-dsa/network/members">
+    <img src="https://img.shields.io/github/forks/QuanBlue/golang-dsa" alt="forks" />
   </a>
-  <a href="https://github.com/QuanBlue/go-dsa/stargazers">
-    <img src="https://img.shields.io/github/stars/QuanBlue/go-dsa" alt="stars" />
+  <a href="https://github.com/QuanBlue/golang-dsa/stargazers">
+    <img src="https://img.shields.io/github/stars/QuanBlue/golang-dsa" alt="stars" />
   </a>
-  <a href="https://github.com/QuanBlue/go-dsa/issues/">
-    <img src="https://img.shields.io/github/issues/QuanBlue/go-dsa" alt="open issues" />
+  <a href="https://github.com/QuanBlue/golang-dsa/issues/">
+    <img src="https://img.shields.io/github/issues/QuanBlue/golang-dsa" alt="open issues" />
   </a>
-  <a href="https://github.com/QuanBlue/go-dsa/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/QuanBlue/go-dsa.svg" alt="license" />
+  <a href="https://github.com/QuanBlue/golang-dsa/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/QuanBlue/golang-dsa.svg" alt="license" />
   </a>
 </p>
 
 <p align="center">
   <b>
       <a href="#demo">Demo</a> •
-      <a href="https://github.com/QuanBlue/go-dsa">Documentation</a> •
-      <a href="https://github.com/QuanBlue/go-dsa/issues/">Report Bug</a> •
-      <a href="https://github.com/QuanBlue/go-dsa/issues/">Request Feature</a>
+      <a href="https://github.com/QuanBlue/golang-dsa">Documentation</a> •
+      <a href="https://github.com/QuanBlue/golang-dsa/issues/">Report Bug</a> •
+      <a href="https://github.com/QuanBlue/golang-dsa/issues/">Request Feature</a>
   </b>
 </p>
 
@@ -42,14 +42,14 @@
 <details open>
 <summary><b>📖 Table of Contents</b></summary>
 
-- [Key features](#star-key-features)
-- [Getting start](#toolbox-getting-start)
-  - [Prerequisites](#pushpin-prerequisites)
-  - [Run locally](#hammer_and_wrench-run-locally)
-- [Roadmap](#world_map-roadmap)
-- [Contributors](#busts_in_silhouette-contributors)
-- [Credits](#sparkles-credits)
-- [License](#scroll-license)
+- [:star: Key features](#star-key-features)
+- [:toolbox: Getting start](#toolbox-getting-start)
+  - [:pushpin: Prerequisites](#pushpin-prerequisites)
+  - [:hammer_and_wrench: Run locally](#hammer_and_wrench-run-locally)
+- [:world_map: Roadmap](#world_map-roadmap)
+- [:busts_in_silhouette: Contributors](#busts_in_silhouette-contributors)
+- [:sparkles: Credits](#sparkles-credits)
+- [:scroll: License](#scroll-license)
 </details>
 
 # :star: Key features
@@ -64,10 +64,10 @@
 
 ```bash
 # Clone this repository
-git clone https://github.com/QuanBlue/go-dsa.git
+git clone https://github.com/QuanBlue/golang-dsa.git
 
 # Go into the repository
-cd go-dsa
+cd golang-dsa
 
 # Run program
 go run main.go

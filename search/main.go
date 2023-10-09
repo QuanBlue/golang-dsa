@@ -2,7 +2,18 @@ package search
 
 import (
 	"fmt"
+	"time"
 )
+
+type SearchFunction func([]int, int) (int)
+
+func run(name string, search_fn SearchFunction, arr []int, key int) {
+	start := time.Now()
+	result := search_fn(arr, key)
+	exec_time := time.Since(start)
+	
+	fmt.Println(name+":","Search", key,"at index",result,", execute in",exec_time)
+}
 
 func Main() {
 	fmt.Println("----------------------")
@@ -23,11 +34,7 @@ func Main() {
 	fmt.Print("Input key you wanna search: ")
 	fmt.Scanln(&key)
 
-	// Linear search
-	result, exec_time := linearSearch(arr, key)
-	fmt.Println("\nLinear search",key,"at index",result,"in",exec_time)
-
-	// Binary search
-	result, exec_time = binarySearch(arr, key)
-	fmt.Println("\nBinary search",key,"at index",result,"in",exec_time)
+	fmt.Println("\n--------------------------")
+	run("Linear search", linearSearch, arr, key)
+	run("Binary search", binarySearch, arr, key)
 }

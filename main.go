@@ -1,6 +1,6 @@
 package main
 
-import "go-dsa/search"
+import "golang-dsa/search"
 
 func main() {
 	search.Main()
