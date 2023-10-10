@@ -1,7 +1,10 @@
 package main
 
-import "golang-dsa/search"
+import (
+	"golang-dsa/sort"
+)
 
 func main() {
-	search.Main()
+	// search.Main()
+	sort.Main()
 }
