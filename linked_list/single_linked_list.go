@@ -11,7 +11,10 @@ type SingleLinkedLists struct {
 	head *sNode
 }
 
-// Create a Single Linked List with initial data
+// -------------------------------------------------------------- //
+// Create New Single Node
+// > Create a Single Linked List with initial data
+// -------------------------------------------------------------- //
 func createNewSingleNode(data interface{}) *sNode {
 	new_node := &sNode{
 		data: data,
@@ -21,7 +24,10 @@ func createNewSingleNode(data interface{}) *sNode {
 	return new_node
 }
 
-// Get tail of Single Linked List
+// -------------------------------------------------------------- //
+// Get Tail
+// > Get tail of Single Linked List
+// -------------------------------------------------------------- //
 func (ll *SingleLinkedLists) getTail() *sNode {
 	node := ll.head
 
@@ -36,7 +42,10 @@ func (ll *SingleLinkedLists) getTail() *sNode {
 	}
 }
 
-// Print all element in Single Linked List
+// -------------------------------------------------------------- //
+// Print
+// > Print all element in Single Linked List
+// -------------------------------------------------------------- //
 func (ll *SingleLinkedLists) print() {
 	fmt.Print("Print: ")
 	
@@ -52,7 +61,10 @@ func (ll *SingleLinkedLists) print() {
 	}
 }
 
-// Append node at the end
+// -------------------------------------------------------------- //
+// Append
+// > Append node at the end
+// -------------------------------------------------------------- //
 func (ll *SingleLinkedLists) append(data interface{}) {
 	new_node := createNewSingleNode(data)
 
@@ -68,7 +80,10 @@ func (ll *SingleLinkedLists) append(data interface{}) {
 	ex_tail.next = new_tail
 }
 
-// Remove first node
+// -------------------------------------------------------------- //
+// Pop
+// > Remove first node
+// -------------------------------------------------------------- //
 func (ll *SingleLinkedLists) pop() {
 	if ll.head == nil {
 		return
@@ -77,7 +92,10 @@ func (ll *SingleLinkedLists) pop() {
 	ll.head = ll.head.next 
 }
 
-// Remove all node have value
+// -------------------------------------------------------------- //
+// Remove
+// > Remove all node have value
+// -------------------------------------------------------------- //
 func (ll *SingleLinkedLists) remove(data interface{}) {
 	// case empty linked list
 	if ll.head == nil {

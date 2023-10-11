@@ -1,10 +1,8 @@
 package main
 
-import (
-	"golang-dsa/linked_list"
-)
+import "golang-dsa/sort"
 
 func main() {
 	// search.Main()
-	linked_list.Main()
+	sort.Main()
 }

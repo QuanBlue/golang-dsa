@@ -12,8 +12,10 @@ type DoubleLinkedLists struct {
 	head *dNode
 }
 
-
-// Create a Single Linked List with initial data
+// -------------------------------------------------------------- //
+// Create New Double Node
+// > Create a Single Linked List with initial data
+// -------------------------------------------------------------- //
 func createNewDoubleNode(data interface{}) *dNode {
 	new_node := &dNode{
 		data: data,
@@ -24,7 +26,10 @@ func createNewDoubleNode(data interface{}) *dNode {
 	return new_node
 }
 
-// Get tail of Single Linked List
+// -------------------------------------------------------------- //
+// Get Tail
+// > Get tail of Single Linked List
+// -------------------------------------------------------------- //
 func (ll *DoubleLinkedLists) getTail() *dNode {
 	node := ll.head
 
@@ -39,7 +44,10 @@ func (ll *DoubleLinkedLists) getTail() *dNode {
 	}
 }
 
-// Print all element in Single Linked List
+// -------------------------------------------------------------- //
+// Print
+// > Print all element in Single Linked List
+// -------------------------------------------------------------- //
 func (ll *DoubleLinkedLists) print() {
 	// Print forward
 	fmt.Print("Print (forward) : ")
@@ -70,7 +78,10 @@ func (ll *DoubleLinkedLists) print() {
 	}
 }
 
-// Append node at the end
+// -------------------------------------------------------------- //
+// Append
+// > Append node at the end
+// -------------------------------------------------------------- //
 func (ll *DoubleLinkedLists) append(data interface{}) {
 	new_node := createNewDoubleNode(data)
 
@@ -87,7 +98,10 @@ func (ll *DoubleLinkedLists) append(data interface{}) {
 	ex_tail.next = new_tail
 }
 
-// Remove first node
+// -------------------------------------------------------------- //
+// Pop
+// > Remove first node
+// -------------------------------------------------------------- //
 func (ll *DoubleLinkedLists) pop() {
 	if ll.head == nil {
 		return
@@ -97,7 +111,10 @@ func (ll *DoubleLinkedLists) pop() {
 	ll.head.prev = nil
 }
 
-// Remove all node have value
+// -------------------------------------------------------------- //
+// Remove
+// > Remove all node have value
+// -------------------------------------------------------------- //
 func (ll *DoubleLinkedLists) remove(data interface{}) {
 	// case empty linked list
 	if ll.head == nil {
