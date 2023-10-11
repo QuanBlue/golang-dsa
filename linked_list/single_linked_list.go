@@ -2,18 +2,18 @@ package linked_list
 
 import "fmt"
 
-type Node struct {
+type sNode struct {
 	data interface{} 
-	next *Node
+	next *sNode
 }
 
 type SingleLinkedLists struct {
-	head *Node
+	head *sNode
 }
 
 // Create a Single Linked List with initial data
-func createNewNode(data interface{}) *Node {
-	new_node := &Node{
+func createNewSingleNode(data interface{}) *sNode {
+	new_node := &sNode{
 		data: data,
 		next: nil,
 	}
@@ -22,7 +22,7 @@ func createNewNode(data interface{}) *Node {
 }
 
 // Get tail of Single Linked List
-func (ll *SingleLinkedLists) getTail() *Node {
+func (ll *SingleLinkedLists) getTail() *sNode {
 	node := ll.head
 
 	for node.next != nil && node.next.next != nil{
@@ -38,7 +38,7 @@ func (ll *SingleLinkedLists) getTail() *Node {
 
 // Print all element in Single Linked List
 func (ll *SingleLinkedLists) print() {
-	fmt.Print("Linked list: ")
+	fmt.Print("Print: ")
 	
 	node := ll.head
 
@@ -54,7 +54,7 @@ func (ll *SingleLinkedLists) print() {
 
 // Append node at the end
 func (ll *SingleLinkedLists) append(data interface{}) {
-	new_node := createNewNode(data)
+	new_node := createNewSingleNode(data)
 
 	//case empty linked list
 	if ll.head == nil {
@@ -68,7 +68,7 @@ func (ll *SingleLinkedLists) append(data interface{}) {
 	ex_tail.next = new_tail
 }
 
-// remove first node
+// Remove first node
 func (ll *SingleLinkedLists) pop() {
 	if ll.head == nil {
 		return
@@ -77,8 +77,7 @@ func (ll *SingleLinkedLists) pop() {
 	ll.head = ll.head.next 
 }
 
-
-// remove all node have value
+// Remove all node have value
 func (ll *SingleLinkedLists) remove(data interface{}) {
 	// case empty linked list
 	if ll.head == nil {
