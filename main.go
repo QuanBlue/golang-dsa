@@ -1,8 +1,11 @@
 package main
 
-import "golang-dsa/sort"
+import (
+	"golang-dsa/graph"
+)
 
 func main() {
-	// search.Main()
-	sort.Main()
+	graph.Main()
+	// sort.Main()
+	// linked_list.Main()
 }

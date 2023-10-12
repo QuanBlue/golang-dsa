@@ -2,24 +2,22 @@ package linked_list
 
 import "fmt"
 
-type dNode struct {
-	data interface{}
-	prev *dNode
-	next *dNode
+type sNode struct {
+	data interface{} 
+	next *sNode
 }
 
-type DoubleLinkedLists struct {
-	head *dNode
+type SinglyLinkedLists struct {
+	head *sNode
 }
 
 // -------------------------------------------------------------- //
-// Create New Double Node
+// Create New Single Node
 // > Create a Single Linked List with initial data
 // -------------------------------------------------------------- //
-func createNewDoubleNode(data interface{}) *dNode {
-	new_node := &dNode{
+func createNewSinglyNode(data interface{}) *sNode {
+	new_node := &sNode{
 		data: data,
-		prev: nil,
 		next: nil,
 	}
 
@@ -30,7 +28,7 @@ func createNewDoubleNode(data interface{}) *dNode {
 // Get Tail
 // > Get tail of Single Linked List
 // -------------------------------------------------------------- //
-func (ll *DoubleLinkedLists) getTail() *dNode {
+func (ll *SinglyLinkedLists) getTail() *sNode {
 	node := ll.head
 
 	for node.next != nil && node.next.next != nil{
@@ -48,33 +46,18 @@ func (ll *DoubleLinkedLists) getTail() *dNode {
 // Print
 // > Print all element in Single Linked List
 // -------------------------------------------------------------- //
-func (ll *DoubleLinkedLists) print() {
-	// Print forward
-	fmt.Print("Print (forward) : ")
+func (ll *SinglyLinkedLists) print() {
+	fmt.Print("Print: ")
 	
 	node := ll.head
 
 	for node != nil {
 		if node.next != nil {
-			fmt.Print(node.data," <-> ")
+			fmt.Print(node.data," -> ")
 		} else {
 			fmt.Println(node.data)
 		}
 		node = node.next
-	}
-
-	// Print backward
-	fmt.Print("Print (backward): ")
-	
-	node = ll.getTail()
-
-	for node != nil {
-		if node.prev != nil {
-			fmt.Print(node.data," <-> ")
-		} else {
-			fmt.Print(node.data,"\n\n")
-		}
-		node = node.prev
 	}
 }
 
@@ -82,8 +65,8 @@ func (ll *DoubleLinkedLists) print() {
 // Append
 // > Append node at the end
 // -------------------------------------------------------------- //
-func (ll *DoubleLinkedLists) append(data interface{}) {
-	new_node := createNewDoubleNode(data)
+func (ll *SinglyLinkedLists) append(data interface{}) {
+	new_node := createNewSinglyNode(data)
 
 	//case empty linked list
 	if ll.head == nil {
@@ -94,7 +77,6 @@ func (ll *DoubleLinkedLists) append(data interface{}) {
 	// Insert at the end
 	ex_tail := ll.getTail()
 	new_tail := new_node
-	new_tail.prev = ex_tail
 	ex_tail.next = new_tail
 }
 
@@ -102,20 +84,19 @@ func (ll *DoubleLinkedLists) append(data interface{}) {
 // Pop
 // > Remove first node
 // -------------------------------------------------------------- //
-func (ll *DoubleLinkedLists) pop() {
+func (ll *SinglyLinkedLists) pop() {
 	if ll.head == nil {
 		return
 	}
 
 	ll.head = ll.head.next 
-	ll.head.prev = nil
 }
 
 // -------------------------------------------------------------- //
 // Remove
 // > Remove all node have value
 // -------------------------------------------------------------- //
-func (ll *DoubleLinkedLists) remove(data interface{}) {
+func (ll *SinglyLinkedLists) remove(data interface{}) {
 	// case empty linked list
 	if ll.head == nil {
 		return 
@@ -126,24 +107,15 @@ func (ll *DoubleLinkedLists) remove(data interface{}) {
 		ll.pop()
 	}
 	
-	// case tail node
-	tail := ll.getTail()
-	if tail.data == data {
-		prev_node := tail.prev
-		prev_node.next = nil
-	}
-
 	// other node
 	node := ll.head
 	for node.next != nil {
-		if node.data == data {
-			prev_node := node.prev
-			next_node := node.next
-
-			prev_node.next = next_node
-			next_node.prev = prev_node
+		if node.next.data == data {
+			node.next = node.next.next
+			continue
 		}
 
 		node = node.next
 	}
 }
+

@@ -7,7 +7,7 @@ import (
 )
 
 
-type SortFunction func([]int) []int
+
 
 func copyArray(arr []int) []int{
 	new_arr := make([]int, len(arr))
@@ -43,7 +43,7 @@ func Main(){
 	fmt.Println("----------------------")
 
 
-	arr := generateArray(10, 100)
+	arr := generateArray(20, 100)
 	fmt.Println("Generate array:", arr)
 
 

@@ -15,7 +15,7 @@ func Main() {
 	fmt.Println("-  SINGLE LINKED LISTS  -")
 	fmt.Println("-------------------------")
 
-	s_ll := new(SingleLinkedLists)
+	s_ll := new(SinglyLinkedLists)
 	fmt.Println("s_ll:",&s_ll,"- s_ll.head:",s_ll.head)
 
 	s_ll.append(1)
@@ -40,7 +40,7 @@ func Main() {
 	fmt.Println("-  DOUBLE LINKED LISTS  -")
 	fmt.Println("-------------------------")
 
-	d_ll := new(DoubleLinkedLists)
+	d_ll := new(DoublyLinkedLists)
 	fmt.Println("d_ll:",&d_ll,"- d_ll.head:",d_ll.head)
 
 	d_ll.append(1)
