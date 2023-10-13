@@ -8,11 +8,12 @@ import (
 
 func run(name string, search_fn SearchFunction, graph Graph, start_node, goal_node string) {
 	start := time.Now()
-	isFound, path := search_fn(graph, start_node, goal_node)
+	isFound, weight, path := search_fn(graph, start_node, goal_node)
 	exec_time := time.Since(start)
 
 	fmt.Println(">", name + " (execute in", exec_time.String() + "):") 
 	fmt.Println("  -", goal_node, "is Found:", isFound)
+	fmt.Println("  - Weight:", weight)
 	fmt.Print("  - Path: ")
 
 	for i, v := range path {

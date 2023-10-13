@@ -7,13 +7,14 @@ import (
 // -------------------------------------------------------------- //
 // Breadth First Search (BFS)
 // -------------------------------------------------------------- //
-func breadthFirstSearch(g Graph, start_node, goal_node string) (bool, []Vertex) {
+func breadthFirstSearch(g Graph, start_node, goal_node string) (bool, int, []Vertex) {
 	visited := make([]string, 0)
 	frontier := make([]GraphTraversal, 0)
 
 	// add start node to the queue
 	traversal := GraphTraversal{
 		vertex: g.vertexes[start_node],
+		totalWeight: 0,
 		path: []Vertex{g.vertexes[start_node]},
 	}
 	frontier = append(frontier, traversal)
@@ -26,7 +27,7 @@ func breadthFirstSearch(g Graph, start_node, goal_node string) (bool, []Vertex) 
 
 		// if found vertex -> return
 		if current_node.vertex.name == goal_node {
-			return true, current_node.path
+			return true, current_node.totalWeight, current_node.path
 		}
 
 		// add all child node of current node to frontier
@@ -37,6 +38,7 @@ func breadthFirstSearch(g Graph, start_node, goal_node string) (bool, []Vertex) 
 			for _, child := range current_node.vertex.edges {
 				traversal := GraphTraversal{
 					vertex: child.vertex,
+					totalWeight: current_node.totalWeight + child.weight, 
 					path: append(current_node.path, child.vertex),
 				}
 				frontier = append(frontier, traversal)
@@ -44,5 +46,5 @@ func breadthFirstSearch(g Graph, start_node, goal_node string) (bool, []Vertex) 
 		}
 	}
 
-	return false, make([]Vertex,0)
+	return false, 0, make([]Vertex,0)
 }

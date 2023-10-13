@@ -7,12 +7,13 @@ import (
 	"strconv"
 )
 
-type SearchFunction func(Graph, string, string) (bool, []Vertex)
+type SearchFunction func(Graph, string, string) (bool, int, []Vertex)
 
 // Graph Traversal represents current vertex 
-// with path from start vertex to it
+// with path and cost from start vertex to it, 
 type GraphTraversal struct {
 	vertex Vertex
+	totalWeight int
 	path []Vertex
 }
 
